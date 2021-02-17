@@ -1,1 +1,1 @@
-# cpp_begin
+# c & cpp_begin
