@@ -32,6 +32,12 @@ String::String()
 	this->set_str(NULL);
 }
 */
+String::String(const char *str, bool b)
+{
+	this->str = (char *)str;
+	this->len = strlen(str);
+}
+
 String::String(const char *str)
 {
 	this->set_str(str);	
@@ -54,8 +60,8 @@ const String String::operator+(const String& rhs) const
 	strcpy(buf, this->str);
 	strcat(buf, rhs.str);
 	
-	String result(buf);
-	delete [] buf;
+	String result(buf, true);
+	//delete [] buf;
 	
 	return result;
 }

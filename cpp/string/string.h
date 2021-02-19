@@ -23,6 +23,7 @@ public:
 	int length() const;
 	
 	String& operator=(const String& rhs);
+	String(const char *str, bool b);
 	String& operator=(const char *str);
 	
 	bool operator==(const String& rhs) const;
