@@ -25,14 +25,14 @@ public:
 	explicit Array(int size = ARRAYSIZE);
 	Array(const int *pArr, int size);
 	Array(const Array& rhs);
-	~Array();
+	virtual ~Array();
 	
 	Array& operator=(const Array& rhs);
 	
 	bool operator==(const Array& rhs) const;
 	
-	int& operator[](int index);
-	const int& operator[](int index) const;
+	virtual int& operator[](int index);
+	virtual const int& operator[](int index) const;
 	
 	int size() const;
 };
